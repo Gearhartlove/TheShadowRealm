@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Tiles
   - 
   - 
   - 
@@ -40,4 +40,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Base Tiles
+    uniqueID: 666932667
+    locked: 0
+  - name: Obstacles
+    uniqueID: 3168887911
+    locked: 0
+  - name: Monsters
+    uniqueID: 4053924013
     locked: 0
