@@ -9,6 +9,10 @@ namespace DefaultNamespace {
     public class GameFlowManager : MonoBehaviour {
 
         [SerializeField] MonsterBuilder monster_builder;
+        public MonsterBuilder getMonsterBuilder()
+        {
+            return monster_builder;
+        }
         private GameObject player_monsters;
         private GameObject enemy_monsters;
         
@@ -16,6 +20,7 @@ namespace DefaultNamespace {
         [SerializeField]
         private Board board;
         [SerializeField] private Combat combat;
+        [SerializeField] private Strategy strategy;
         // [SerializeField] private DebugUIPanel debug_text;
 
         // private GamePhases current_game_state = GamePhases.Combat;
@@ -23,9 +28,9 @@ namespace DefaultNamespace {
         // Starts the flow of the game, starting with X (what you call)
         private void Start() {
             SetupGame();
-            monster_builder.GenerateMonster(MonsterType.Goblin, player_monsters, 7,7);
-            CombatPhase();
-            //StrategyPhase();
+            //monster_builder.GenerateMonster(MonsterType.Goblin, player_monsters, 7,7);
+            //CombatPhase();
+            StrategyPhase();
         }
 
         private void SetupGame() {
@@ -34,7 +39,7 @@ namespace DefaultNamespace {
         }
 
         private void StrategyPhase() {
-            // debug_text.AppendText("[Strategy Phase]");
+            strategy.StartPhase();
         }
 
          

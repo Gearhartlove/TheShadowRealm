@@ -6,10 +6,15 @@ using UnityEngine;
 namespace Monster {
     public class MonsterPrefabList: MonoBehaviour {
         [SerializeField] public GameObject goblin_prefab;
+        [SerializeField] public GameObject crow_prefab;
+        [SerializeField] public GameObject skeleton_archer_prefab;
+        [SerializeField] public GameObject spider_prefab;
     }
     public enum MonsterType {
         Goblin,
         Crow,
+        Skeleton_Archer,
+        Spider,
     }
 }
 

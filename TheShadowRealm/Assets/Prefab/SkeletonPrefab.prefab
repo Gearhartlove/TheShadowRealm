@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 6178033682630415852}
   - component: {fileID: 6178033682630415854}
   - component: {fileID: 6178033682630415853}
-  - component: {fileID: -297732090545650301}
   - component: {fileID: 5659439062718224934}
   - component: {fileID: -1341324135991171424}
+  - component: {fileID: 92986233035915182}
   m_Layer: 0
-  m_Name: GoblinPrefab
+  m_Name: SkeletonPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: -241043283
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2810907732982942543, guid: 7f292560fb0d8bd4ba3235d4418524d6, type: 3}
+  m_Sprite: {fileID: 2529344528012073629, guid: 8b9c1fd821361d84592fa50608867462, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -96,7 +96,7 @@ Animator:
   m_GameObject: {fileID: 6178033682630415851}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 75df8e39fff46364fb420d06c8534278, type: 2}
+  m_Controller: {fileID: 9100000, guid: c69bd09d0cc94c5498577c0512b61988, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -105,18 +105,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-297732090545650301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6178033682630415851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a64ace3ebb06a44529f6b3f774102af3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5659439062718224934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,3 +146,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.8705785}
   m_EdgeRadius: 0
+--- !u!114 &92986233035915182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6178033682630415851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b48780e197003c04cb372bf105036da9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

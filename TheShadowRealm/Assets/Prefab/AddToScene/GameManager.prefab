@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1766295619838945466}
   - component: {fileID: 1766295619838945467}
   - component: {fileID: 1766295619838945461}
+  - component: {fileID: 5495375296212652991}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -45,7 +46,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameFlowManager: {fileID: 1766295619838945461}
-  debug_text: {fileID: 0}
   player_win: 0
   enemy_win: 0
 --- !u!114 &1766295619838945461
@@ -61,8 +61,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monster_builder: {fileID: 2851413375160499997, guid: 56e1590cbdcb44e5384cccf82325bb60, type: 3}
-  player_monsters: {fileID: 117622751889643106, guid: 653d237e9c4234b8f90731259ae693db, type: 3}
-  enemy_monsters: {fileID: 1577117977080834666, guid: bd7562f261143405f9050b204e1291a1, type: 3}
   board: {fileID: 3193168419604522864, guid: d3214159fe0f741178cce6af5b21e9b2, type: 3}
   combat: {fileID: 1766295619838945467}
-  debug_text: {fileID: 0}
+--- !u!114 &5495375296212652991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766295619838945464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49f146e5f37013f448f1956cb0b80846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameFlowManager: {fileID: 1766295619838945461}
