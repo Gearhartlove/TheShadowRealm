@@ -13,12 +13,6 @@ public class Cell {
     public Cell() {
         cell_type = Tile.Flat; // temporary, implement random generation eventually
     }
-
-    // randomly assign a tile to a value
-    private void ProceduralGeneration() {
-        
-    }
-    
 }
 
 // Types which the cells can be

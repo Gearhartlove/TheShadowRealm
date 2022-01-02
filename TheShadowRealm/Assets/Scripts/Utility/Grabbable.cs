@@ -15,21 +15,37 @@ namespace DefaultNamespace {
 
         private Vector2 mouse_world_position;
         private Vector3 old_position;
-        private Vector2 new_position;
+        private Vector3 new_position;
+
 
         public void OnMouseDown() {
             isDragging = true;
-            old_position = main_camera.ScreenToWorldPoint(Input.mousePosition);
+            old_position = transform.position;
         }
 
         public void OnMouseUp() {
+            new_position = main_camera.ScreenToWorldPoint(Input.mousePosition);
+            new_position.z = 3;
             isDragging = false;
-            if (IsOOB()) {
-                old_position.z = 3;
-                gameObject.transform.position = old_position;
-            } else {
-                
+
+            var x_mouse_world_diff = Mathf.Abs(new_position.x - old_position.x);
+            var y_mouse_world_diff = Mathf.Abs(new_position.y - old_position.y);
+            if (x_mouse_world_diff >= 0.5 || y_mouse_world_diff >= 0.5) {
+                //place the object in the correct exact spot, 
+                Vector3 rounded_new_pos = new Vector3((float) (Mathf.Floor(mouse_world_position.x) + 0.47),
+                    (float) (Mathf.Round(mouse_world_position.y) - 0.21), 3);
+                if (!IsOOB()) {
+                    gameObject.transform.position = rounded_new_pos;
+                }
             }
+            else {
+                ResetPosition();
+            }
+        }
+
+        private void ResetPosition() {
+            old_position.z = 3;
+            gameObject.transform.position = old_position;
         }
 
         void Update() {
@@ -37,18 +53,23 @@ namespace DefaultNamespace {
                 mouse_world_position = main_camera.ScreenToWorldPoint(Input.mousePosition);
                 mousePosition = main_camera.ScreenToWorldPoint(Input.mousePosition) - transform.position;
                 transform.Translate(mousePosition);
-                // Debug.Log(mouse_world_position);
             }
         }
 
         public bool IsOOB() {
+            Debug.Log("out of bounds");
             if (mouse_world_position.x < upper_left.transform.position.x ||
                 mouse_world_position.x > lower_right.transform.position.x ||
                 mouse_world_position.y > upper_left.transform.position.y ||
                 mouse_world_position.y < lower_right.transform.position.y) {
                 return true;
             }
+
             return false;
         }
+
+        // private bool AutoSnap() {
+        //     
+        // }
     }
 }
