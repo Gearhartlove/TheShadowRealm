@@ -8,26 +8,11 @@ using UnityEngine.UI;
 namespace DefaultNamespace {
     public class GameFlowManager : MonoBehaviour {
 
-        [SerializeField]
-        private MonsterPrefabList monster_prefab_list;
-        
-        private int monster_cap = 8;
+        [SerializeField] MonsterBuilder monster_builder;
         [SerializeField] private GameObject player_monsters;
         [SerializeField] private GameObject enemy_monsters;
         
-        // add monster by switching on lowercase monster type
-        public void add_monster(MonsterType monster,  GameObject monster_list) {
-            
-            // can't add more monsters than current amount of monsters
-            if (monster_list.transform.childCount <= monster_cap) {
-                switch (monster) {
-                    case MonsterType.Goblin:
-                        Instantiate(monster_prefab_list.goblin_prefab, monster_list.transform);
-                        // debug_text.AppendText(monster.ToString() + " added to board");
-                        break;
-                }
-            }
-        }
+        
         [SerializeField]
         private Board board;
         [SerializeField] private Combat combat;
@@ -37,7 +22,7 @@ namespace DefaultNamespace {
 
         // Starts the flow of the game, starting with X (what you call)
         private void Start() {
-            add_monster(MonsterType.Goblin, player_monsters);
+            monster_builder.GenerateMonster(MonsterType.Goblin, player_monsters, 7,7);
             CombatPhase();
             //StrategyPhase();
         }

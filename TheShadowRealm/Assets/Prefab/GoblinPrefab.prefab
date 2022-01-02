@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6178033682630415854}
   - component: {fileID: 6178033682630415853}
   - component: {fileID: -297732090545650301}
+  - component: {fileID: 5659439062718224934}
+  - component: {fileID: -1341324135991171424}
   m_Layer: 0
   m_Name: GoblinPrefab
   m_TagString: Untagged
@@ -27,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6178033682630415851}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.401061, y: 2.78, z: 2.3138843}
+  m_LocalPosition: {x: -5.47, y: 2.76, z: 2.3138843}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -115,3 +117,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64ace3ebb06a44529f6b3f774102af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5659439062718224934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6178033682630415851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0940030d2b054c0fb668f4893b36f95d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main_camera: {fileID: 6824262619073641633, guid: 44d0f9e2452c14277836a11fef60e8ec, type: 3}
+  upper_left: {fileID: 8809698718965815171, guid: 716507ddfdcf2487695ce4809af25d64, type: 3}
+  upper_right: {fileID: 3226595309665090660, guid: 639a041ba606c44f491d7fadc270fcad, type: 3}
+  lower_left: {fileID: 1794313615476939349, guid: 68b90a2603b3b4fb98091c35f323401f, type: 3}
+  lower_right: {fileID: 2872804570538386135, guid: a8b1247fb5a9c4d7eb220951193ace2b, type: 3}
+--- !u!61 &-1341324135991171424
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6178033682630415851}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.06471074}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.8705785}
+  m_EdgeRadius: 0
