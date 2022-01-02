@@ -16,7 +16,7 @@ namespace DefaultNamespace {
         [SerializeField]
         private Board board;
         [SerializeField] private Combat combat;
-        [SerializeField] private DebugUIPanel debug_text;
+        // [SerializeField] private DebugUIPanel debug_text;
 
         // private GamePhases current_game_state = GamePhases.Combat;
 

@@ -13,7 +13,7 @@ public class Combat : MonoBehaviour {
     }
 
     [SerializeField] private GameFlowManager _gameFlowManager;
-    [SerializeField] private DebugUIPanel debug_text;
+    // [SerializeField] private DebugUIPanel debug_text;
 
 
     [SerializeField] private bool player_win = false;
