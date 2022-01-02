@@ -1,34 +1,31 @@
 fileFormatVersion: 2
-guid: 061d12c051589ae4a93fea38ef9c9773
+guid: e17f6f10020b0ef428d45fceef6910a7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4605661679386408066
-    second: shop portal_0
+      213: -1246586746563560092
+    second: Starting Zone_0
   - first:
-      213: 5091735825048636013
-    second: shop portal_1
+      213: 27028412380068418
+    second: Starting Zone_1
   - first:
-      213: 3553212860807401894
-    second: shop portal_2
+      213: -3902261484914015636
+    second: Starting Zone_2
   - first:
-      213: -7399927060330233306
-    second: shop portal_3
+      213: 2955587107728911805
+    second: Starting Zone_3
   - first:
-      213: -4144336237226019139
-    second: shop portal_4
+      213: -2740571958590067415
+    second: Starting Zone_4
   - first:
-      213: -8835171143903760916
-    second: shop portal_5
+      213: 4734426880461659205
+    second: Starting Zone_5
   - first:
-      213: -8567955417626617521
-    second: shop portal_6
+      213: 2514613652150167859
+    second: Starting Zone_6
   - first:
-      213: 5809531417271534270
-    second: shop portal_7
-  - first:
-      213: -7503800028856326687
-    second: shop portal_8
+      213: -522625195271417841
+    second: Starting Zone_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -142,7 +139,49 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shop portal_0
+      name: Starting Zone_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d7e5d65fb33bee0800000000000000
+      internalID: -1246586746563560092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starting Zone_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ab1c6a236006000800000000000000
+      internalID: 27028412380068418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starting Zone_2
       rect:
         serializedVersion: 2
         x: 0
@@ -156,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7b4b8cba176510c0800000000000000
-      internalID: -4605661679386408066
+      spriteID: c620303cad168d9c0800000000000000
+      internalID: -3902261484914015636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shop portal_1
+      name: Starting Zone_3
       rect:
         serializedVersion: 2
         x: 16
@@ -177,35 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6a872671ca79a640800000000000000
-      internalID: 5091735825048636013
+      spriteID: dbde7eaa0da540920800000000000000
+      internalID: 2955587107728911805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shop portal_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a156cb654c8f4130800000000000000
-      internalID: 3553212860807401894
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: shop portal_3
+      name: Starting Zone_4
       rect:
         serializedVersion: 2
         x: 0
@@ -219,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 622473d8b8d2e4990800000000000000
-      internalID: -7399927060330233306
+      spriteID: 92da7d6e25887f9d0800000000000000
+      internalID: -2740571958590067415
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shop portal_4
+      name: Starting Zone_5
       rect:
         serializedVersion: 2
         x: 16
@@ -240,35 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db63d5e562c5c76c0800000000000000
-      internalID: -4144336237226019139
+      spriteID: 54c5af8e92014b140800000000000000
+      internalID: 4734426880461659205
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shop portal_5
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ceda5d5c7aa236580800000000000000
-      internalID: -8835171143903760916
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: shop portal_6
+      name: Starting Zone_6
       rect:
         serializedVersion: 2
         x: 0
@@ -282,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f495bf051f1881980800000000000000
-      internalID: -8567955417626617521
+      spriteID: 33922cb2bc3b5e220800000000000000
+      internalID: 2514613652150167859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shop portal_7
+      name: Starting Zone_7
       rect:
         serializedVersion: 2
         x: 16
@@ -303,29 +300,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb201f53b0a9f9050800000000000000
-      internalID: 5809531417271534270
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: shop portal_8
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e5e37e61a52dd790800000000000000
-      internalID: -7503800028856326687
+      spriteID: f009d2567234fb8f0800000000000000
+      internalID: -522625195271417841
       vertices: []
       indices: 
       edges: []

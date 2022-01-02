@@ -1,34 +1,40 @@
 fileFormatVersion: 2
-guid: 061d12c051589ae4a93fea38ef9c9773
+guid: d66404be59d57dc4983cd5a3ceb94596
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4605661679386408066
-    second: shop portal_0
+      213: -9086030183863377552
+    second: Death animation_0
   - first:
-      213: 5091735825048636013
-    second: shop portal_1
+      213: -7153936228573687764
+    second: Death animation_1
   - first:
-      213: 3553212860807401894
-    second: shop portal_2
+      213: -2626268446236666977
+    second: Death animation_2
   - first:
-      213: -7399927060330233306
-    second: shop portal_3
+      213: 6070534571612393822
+    second: Death animation_3
   - first:
-      213: -4144336237226019139
-    second: shop portal_4
+      213: -5317208065267751744
+    second: Death animation_4
   - first:
-      213: -8835171143903760916
-    second: shop portal_5
+      213: -6619661365726770800
+    second: Death animation_5
   - first:
-      213: -8567955417626617521
-    second: shop portal_6
+      213: -7835799286546077909
+    second: Death animation_6
   - first:
-      213: 5809531417271534270
-    second: shop portal_7
+      213: 1649078521439631179
+    second: Death animation_7
   - first:
-      213: -7503800028856326687
-    second: shop portal_8
+      213: 3337195958476319453
+    second: Death animation_8
+  - first:
+      213: -8766427828873677882
+    second: Death animation_9
+  - first:
+      213: 3189495251535540995
+    second: Death animation_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -142,133 +148,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shop portal_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e7b4b8cba176510c0800000000000000
-      internalID: -4605661679386408066
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: shop portal_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d6a872671ca79a640800000000000000
-      internalID: 5091735825048636013
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: shop portal_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a156cb654c8f4130800000000000000
-      internalID: 3553212860807401894
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: shop portal_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 622473d8b8d2e4990800000000000000
-      internalID: -7399927060330233306
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: shop portal_4
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: db63d5e562c5c76c0800000000000000
-      internalID: -4144336237226019139
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: shop portal_5
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ceda5d5c7aa236580800000000000000
-      internalID: -8835171143903760916
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: shop portal_6
+      name: Death animation_0
       rect:
         serializedVersion: 2
         x: 0
@@ -282,14 +162,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f495bf051f1881980800000000000000
-      internalID: -8567955417626617521
+      spriteID: 071a85800bfe7e180800000000000000
+      internalID: -9086030183863377552
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shop portal_7
+      name: Death animation_1
       rect:
         serializedVersion: 2
         x: 16
@@ -303,14 +183,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb201f53b0a9f9050800000000000000
-      internalID: 5809531417271534270
+      spriteID: c20511e37ec18bc90800000000000000
+      internalID: -7153936228573687764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shop portal_8
+      name: Death animation_2
       rect:
         serializedVersion: 2
         x: 32
@@ -324,8 +204,176 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e5e37e61a52dd790800000000000000
-      internalID: -7503800028856326687
+      spriteID: f931f3143ce9d8bd0800000000000000
+      internalID: -2626268446236666977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death animation_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e515fa1a70fde3450800000000000000
+      internalID: 6070534571612393822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death animation_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c4afd8bf6b7536b0800000000000000
+      internalID: -5317208065267751744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death animation_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0998a727f0d3224a0800000000000000
+      internalID: -6619661365726770800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death animation_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2769229016a14390800000000000000
+      internalID: -7835799286546077909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death animation_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b47b2259d24b2e610800000000000000
+      internalID: 1649078521439631179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death animation_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddaa9d20b0a105e20800000000000000
+      internalID: 3337195958476319453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death animation_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c3b2ee0654675680800000000000000
+      internalID: -8766427828873677882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death animation_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3033298580d534c20800000000000000
+      internalID: 3189495251535540995
       vertices: []
       indices: 
       edges: []

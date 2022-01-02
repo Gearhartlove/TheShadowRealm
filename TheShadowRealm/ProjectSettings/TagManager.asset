@@ -47,6 +47,12 @@ TagManager:
   - name: Obstacles
     uniqueID: 3168887911
     locked: 0
+  - name: Shop Elements
+    uniqueID: 115903655
+    locked: 0
   - name: Monsters
     uniqueID: 4053924013
+    locked: 0
+  - name: UI
+    uniqueID: 1735230687
     locked: 0
