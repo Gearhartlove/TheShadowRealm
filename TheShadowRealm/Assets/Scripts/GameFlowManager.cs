@@ -9,8 +9,8 @@ namespace DefaultNamespace {
     public class GameFlowManager : MonoBehaviour {
 
         [SerializeField] MonsterBuilder monster_builder;
-        [SerializeField] private GameObject player_monsters;
-        [SerializeField] private GameObject enemy_monsters;
+        private GameObject player_monsters;
+        private GameObject enemy_monsters;
         
         
         [SerializeField]
@@ -22,9 +22,15 @@ namespace DefaultNamespace {
 
         // Starts the flow of the game, starting with X (what you call)
         private void Start() {
+            SetupGame();
             monster_builder.GenerateMonster(MonsterType.Goblin, player_monsters, 7,7);
             CombatPhase();
             //StrategyPhase();
+        }
+
+        private void SetupGame() {
+            player_monsters = GameObject.Find("PlayerTeam");
+            player_monsters = GameObject.Find("EnemyTeam");
         }
 
         private void StrategyPhase() {
