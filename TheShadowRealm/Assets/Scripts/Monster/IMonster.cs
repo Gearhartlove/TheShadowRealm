@@ -1,11 +1,31 @@
 using System;
 
-namespace DefaultNamespace {
+namespace Monster {
     public interface IMonster {
-        int GetHealth();
-        int GetSpeed();
+        
+        int GetValue();
         int GetAttack();
-        Tuple<int, int> GetMovement();
-        // int GetAbility();
+        int GetMovement();
+        int GetRange();
+        int GetHealth();
+        string GetStringType();
+        
+        Tuple<int, int> GetPosition();
+        int GetX();
+        int GetY();
+        
+        IMonster GetTarget();
+        
+        bool GetInRange();
+        void SetInRange(bool value);
+
+        bool GetIsEnemy();
+        void SetIsEnemy(bool value);
+
+        // Actions
+        void Attack();
+        void Move();
+        void Ability();
+        void Die();
     }
 }
