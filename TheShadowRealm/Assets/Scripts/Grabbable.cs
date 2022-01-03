@@ -37,9 +37,9 @@ namespace DefaultNamespace {
                 if (!IsOOB()) {
                     gameObject.transform.position = rounded_new_pos;
                 }
-            }
-            else {
-                ResetPosition();
+                else {
+                    ResetPosition();
+                }
             }
         }
 
@@ -57,19 +57,16 @@ namespace DefaultNamespace {
         }
 
         public bool IsOOB() {
-            Debug.Log("out of bounds");
+            Debug.Log("OOB test");
             if (mouse_world_position.x < upper_left.transform.position.x ||
                 mouse_world_position.x > lower_right.transform.position.x ||
                 mouse_world_position.y > upper_left.transform.position.y ||
                 mouse_world_position.y < lower_right.transform.position.y) {
+                Debug.Log("100p OOB");
                 return true;
             }
 
             return false;
         }
-
-        // private bool AutoSnap() {
-        //     
-        // }
     }
 }
