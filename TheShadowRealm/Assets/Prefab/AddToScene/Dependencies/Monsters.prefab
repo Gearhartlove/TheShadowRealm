@@ -50,6 +50,7 @@ MonoBehaviour:
   crow_prefab: {fileID: 6178033682630415851, guid: 6015de4a8840f6c4d9a8d5446f7eeb71, type: 3}
   skeleton_archer_prefab: {fileID: 6178033682630415851, guid: 4c8a1b0575cb16049aac014eaf7afc04, type: 3}
   spider_prefab: {fileID: 6178033682630415851, guid: 7089e5bca9d08d643929482768756625, type: 3}
+  kobold_prefab: {fileID: 6178033682630415851, guid: c53b4c2d3e78a34488be8c3e08529004, type: 3}
 --- !u!1 &60249459633312722
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,12 +9,14 @@ namespace Monster {
         [SerializeField] public GameObject crow_prefab;
         [SerializeField] public GameObject skeleton_archer_prefab;
         [SerializeField] public GameObject spider_prefab;
+        [SerializeField] public GameObject kobold_prefab;
     }
     public enum MonsterType {
         Goblin,
         Crow,
         Skeleton_Archer,
         Spider,
+        Kobold,
     }
 }
 

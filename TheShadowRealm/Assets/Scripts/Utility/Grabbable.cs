@@ -57,7 +57,6 @@ namespace DefaultNamespace {
         }
 
         public bool IsOOB() {
-            Debug.Log("out of bounds");
             if (mouse_world_position.x < upper_left.transform.position.x ||
                 mouse_world_position.x > lower_right.transform.position.x ||
                 mouse_world_position.y > upper_left.transform.position.y ||
