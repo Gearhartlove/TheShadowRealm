@@ -13,6 +13,8 @@ namespace Monster {
         Tuple<int, int> GetPosition();
         int GetX();
         int GetY();
+        void SetY(int x);
+        void SetX(int y);
         
         IMonster GetTarget();
         
@@ -24,6 +26,8 @@ namespace Monster {
 
         // Actions
         void Attack();
+        void DamageHealth(int attack); 
+        
         void Move();
         void Ability();
         void Die();

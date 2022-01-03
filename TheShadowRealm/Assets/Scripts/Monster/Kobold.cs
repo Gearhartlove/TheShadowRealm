@@ -3,19 +3,19 @@ using DefaultNamespace;
 using UnityEngine;
 
 namespace Monster {
-    public class Goblin : MonoBehaviour, IMonster {
-        private int value = 1; 
-        private int attack = 1; 
-        private int health = 2; 
-        private int movement = 1; 
+    public class Kobold : MonoBehaviour, IMonster {
+        private int value = 2;
+        private int attack = 1;
+        private int health = 1;
+        private int movement = 1;
         private int range = 1;
         private Ability ability;
-        private int x_position = Int32.MaxValue;    
+        private int x_position = Int32.MaxValue;
         private int y_position = Int32.MaxValue;
-        private IMonster target;
+        private IMonster Target;
         private bool inRange = false;
         private bool isEnemy = false;
-        private string stringType = "goblin";
+        private string stringType = "kobold";
 
         public int GetValue() => value;
         public int GetAttack() => attack;
@@ -36,21 +36,22 @@ namespace Monster {
             y_position = y;
         }
 
-        public IMonster GetTarget() => target;
+        public IMonster GetTarget() => Target;
 
         public bool GetInRange() => inRange;
-        public void SetInRange(bool isRange) {
-            inRange = isRange;
+
+        public void SetInRange(bool value) {
+            inRange = value;
         }
 
         public bool GetIsEnemy() => isEnemy;
-        public void SetIsEnemy(bool enemy) {
-            isEnemy = enemy;
+
+        public void SetIsEnemy(bool value) {
+            isEnemy = value;
         }
 
         // Actions
         public void Attack() {
-            target.DamageHealth(GetAttack());
         }
 
         public void DamageHealth(int attack) {
@@ -58,14 +59,12 @@ namespace Monster {
         }
 
         public void Move() {
-        
         }
 
         public void Ability() {
         }
 
         public void Die() {
-        
         }
     }
 }

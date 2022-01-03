@@ -2,14 +2,12 @@ using System;
 using DefaultNamespace;
 using UnityEngine;
 
-namespace Monster
-{
-    public class Crow : MonoBehaviour, IMonster
-    {
+namespace Monster {
+    public class Spider : MonoBehaviour, IMonster {
         private int value = 1;
         private int attack = 1;
         private int health = 1;
-        private int movement = 2;
+        private int movement = 1;
         private int range = 1;
         private Ability ability;
         private int x_position = Int32.MaxValue;
@@ -17,7 +15,7 @@ namespace Monster
         private IMonster Target;
         private bool inRange = false;
         private bool isEnemy = false;
-        private string stringType = "crow";
+        private string stringType = "spider";
 
         public int GetValue() => value;
         public int GetAttack() => attack;
@@ -30,39 +28,43 @@ namespace Monster
         public int GetX() => x_position;
         public int GetY() => y_position;
 
+        public void SetX(int x) {
+            x_position = x;
+        }
+
+        public void SetY(int y) {
+            y_position = y;
+        }
+
         public IMonster GetTarget() => Target;
 
         public bool GetInRange() => inRange;
-        public void SetInRange(bool value)
-        {
+
+        public void SetInRange(bool value) {
             inRange = value;
         }
 
         public bool GetIsEnemy() => isEnemy;
-        public void SetIsEnemy(bool value)
-        {
+
+        public void SetIsEnemy(bool value) {
             isEnemy = value;
         }
 
         // Actions
-        public void Attack()
-        {
-
+        public void Attack() {
         }
 
-        public void Move()
-        {
-
+        public void DamageHealth(int attack) {
+            health -= attack;
         }
 
-        public void Ability()
-        {
-
+        public void Move() {
         }
 
-        public void Die()
-        {
+        public void Ability() {
+        }
 
+        public void Die() {
         }
     }
 }

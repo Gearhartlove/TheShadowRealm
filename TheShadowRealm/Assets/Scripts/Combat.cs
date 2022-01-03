@@ -6,14 +6,14 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Combat : MonoBehaviour {
-    private Board board;
+    [SerializeField] private Board board;
 
     public void SetBoard(Board board) {
         this.board = board;
     }
 
     [SerializeField] private GameFlowManager _gameFlowManager;
-    // [SerializeField] private DebugUIPanel debug_text;
+    [SerializeField] private DebugUIPanel debug_text;
 
 
     [SerializeField] private bool player_win = false;
@@ -27,11 +27,25 @@ public class Combat : MonoBehaviour {
     /// </summary>
     public void CombatUpdate() {
         ++combat_turn;
-        // debug_text.AppendText(combat_turn.ToString());
+        debug_text.AppendText(">>>Turn: " + combat_turn.ToString());
+        AssignTarget();
         MonsterRangeUpdate();
-        // MonsterActions(); // if monster in range => attack, else move toward closest enemy 
+        MonsterActions(); // if monster in range => attack, else move toward closest enemy 
         // MonsterStatusCheck(); // which monster's died?
         // AssessGame(); // has either side won?
+    }
+
+    private void AssignTarget() {
+        foreach (IMonster monster in board.GetMonsters) {
+            if (monster.GetTarget() != null) {
+                // assign a target to the closest enemy
+                foreach (IMonster enemy in board.GetMonsters) {
+                    if (enemy.GetIsEnemy()) {
+                        
+                    }
+                } 
+            }
+        }
     }
 
     /// <summary>
@@ -40,7 +54,7 @@ public class Combat : MonoBehaviour {
     private void MonsterRangeUpdate() {
         foreach (IMonster monster in board.GetMonsters) {
             int r = monster.GetRange();
-            monster.SetInRange(false);
+            //monster.SetInRange(false);
             // look around the monsters for enemy monsters. Account for different range values.
             while (r > 0) {
                 if (
@@ -49,8 +63,9 @@ public class Combat : MonoBehaviour {
                     board.CheckEnemyMonster(monster.GetX(), monster.GetY() + r) ||
                     board.CheckEnemyMonster(monster.GetX(), monster.GetY() - r)) {
                     monster.SetInRange(true); // set monster in range to true
+                    debug_text.AppendText(monster.GetStringType() + " [" + monster.GetX() + "," + monster.GetY() 
+                                          + "] found target");
                 }
-
                 r--;
             }
         }
@@ -61,6 +76,10 @@ public class Combat : MonoBehaviour {
         foreach (IMonster monster in board.GetMonsters) {
             if (monster.GetInRange()) {
                 monster.Attack();
+                debug_text.AppendText(monster.GetStringType() + " [" + monster.GetX() + "," + monster.GetY()
+                                        + "] attacked " + monster.GetTarget().GetStringType() + "at [" + monster.GetX()
+                                        + "," + monster.GetY() + "].");
+                // trigger monster attack animation
             }
             else {
                 monster.Move();

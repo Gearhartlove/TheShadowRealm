@@ -13,6 +13,9 @@ public class Board : MonoBehaviour {
         return board[y, x];
     }
 
+    public const double XSTART = -5.47;
+    public const double YSTART = 2.76 ;
+
     private List<IMonster> monsters;
     public List<IMonster> GetMonsters => monsters;
 
