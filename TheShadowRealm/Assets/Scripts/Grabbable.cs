@@ -17,6 +17,12 @@ namespace DefaultNamespace {
         private Vector3 old_position;
         private Vector3 new_position;
 
+        private Strategy Strategy;
+
+        private void Awake()
+        {
+            Strategy = GameObject.Find("GameManager").GetComponent<Strategy>();
+        }
 
         public void OnMouseDown() {
             isDragging = true;
@@ -36,6 +42,7 @@ namespace DefaultNamespace {
                     (float) (Mathf.Round(mouse_world_position.y) - 0.21), 3);
                 if (!IsOOB()) {
                     gameObject.transform.position = rounded_new_pos;
+                    Strategy.MoveMonster(gameObject);
                 }
                 else {
                     ResetPosition();
@@ -43,7 +50,7 @@ namespace DefaultNamespace {
             }
         }
 
-        private void ResetPosition() {
+        public void ResetPosition() {
             old_position.z = 3;
             gameObject.transform.position = old_position;
         }
@@ -57,12 +64,10 @@ namespace DefaultNamespace {
         }
 
         public bool IsOOB() {
-            Debug.Log("OOB test");
             if (mouse_world_position.x < upper_left.transform.position.x ||
                 mouse_world_position.x > lower_right.transform.position.x ||
                 mouse_world_position.y > upper_left.transform.position.y ||
                 mouse_world_position.y < lower_right.transform.position.y) {
-                Debug.Log("100p OOB");
                 return true;
             }
 

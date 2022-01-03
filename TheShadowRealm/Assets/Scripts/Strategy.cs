@@ -53,7 +53,13 @@ public class Strategy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        foreach (GameObject monster in ShopMonsters)
+        {
+            if (!monster)
+            {
+                SpawnMonster(ShopMonsters.IndexOf(monster) + 1);
+            }
+        }
     }
 
     private void SpawnMonster(int shopSlot)
@@ -103,12 +109,13 @@ public class Strategy : MonoBehaviour
         }
     }
 
-    public void PurchaseMonster(IMonster monster, int shopSlot)
+    public void PurchaseMonster(IMonster monster, int shopSlot, GameObject monsterObject)
     {
         if (monster.GetValue() > Currency)
         {
             // Don't allow monster to be purchased
             // monster.SetPosition(ShopXPos[shopSlot], ShopYPos);
+            monsterObject.GetComponent<Grabbable>().ResetPosition();
         } else
         {
             // Buy the monster, add it to the party
@@ -118,6 +125,40 @@ public class Strategy : MonoBehaviour
             currentShopMonster.transform.SetParent(GameObject.Find("PlayerTeam").transform);
         }
     }
+
+    public void MoveMonster(GameObject monster)
+    {
+        IMonster movedMonster = monster.GetComponent<IMonster>();
+        
+        // Check if trying to sacrifice monster
+        if (movedMonster.GetX() > 8 && movedMonster.GetX() < 11 && movedMonster.GetY() > 5)
+        {
+            if (ShopMonsters.Contains(monster))
+            {
+                monster.GetComponent<Grabbable>().ResetPosition();
+            } else
+            {
+                SacrificeMonster(monster, movedMonster);
+            }
+        }
+        else if (ShopMonsters.Contains(monster))
+        {
+            if(movedMonster.GetX() != ShopXPos[ShopMonsters.IndexOf(monster)] || movedMonster.GetY() != ShopYPos)
+            PurchaseMonster(movedMonster, ShopMonsters.IndexOf(monster), monster);
+        }
+    }
+
+    public void SacrificeMonster(GameObject monsterObject, IMonster monster)
+    {
+        int returnedValue = monster.GetValue() - 1;
+        if (returnedValue <= 0)
+        {
+            returnedValue = 1;
+        }
+        Currency += returnedValue;
+        Destroy(monsterObject);
+    }
+
 
     public void StartPhase()
     {
@@ -138,5 +179,17 @@ public class Strategy : MonoBehaviour
     public int GetCurrency()
     {
         return Currency;
+    }
+
+    public void RollShop()
+    {
+        if (Currency >= 1)
+        {
+            Currency--;
+            foreach (GameObject monster in ShopMonsters)
+            {
+                GameObject.Destroy(monster);
+            }
+        }
     }
 }
