@@ -8,7 +8,7 @@ namespace Monster
     public class MonsterValueList : MonoBehaviour
     {
         private List<MonsterType> one_value = new List<MonsterType>() { MonsterType.Crow, MonsterType.Goblin, MonsterType.Skeleton_Archer, MonsterType.Spider };
-        private List<MonsterType> two_value = new List<MonsterType>() { };
+        private List<MonsterType> two_value = new List<MonsterType>() { MonsterType.Kobold };
         private List<MonsterType> three_value = new List<MonsterType>() { };
         private List<MonsterType> four_value = new List<MonsterType>() { };
 

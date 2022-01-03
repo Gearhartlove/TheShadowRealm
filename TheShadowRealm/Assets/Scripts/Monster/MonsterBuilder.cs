@@ -29,7 +29,11 @@ namespace Monster {
                         transform.position.y - y, 3), transform.rotation, monster_roster.transform);
                     // debug_text.AppendText(monster.ToString() + " added to board");
                     break;
-
+                case MonsterType.Kobold:
+                    newMonster = Instantiate(monster_prefab_list.kobold_prefab, new Vector3(transform.position.x + x,
+                        transform.position.y - y, 3), transform.rotation, monster_roster.transform);
+                    // debug_text.AppendText(monster.ToString() + " added to board");
+                    break;
             }
             return newMonster;
         }

@@ -10,6 +10,10 @@ public class ShopUnitUI : MonoBehaviour
     [SerializeField] GameObject Unit2;
     [SerializeField] GameObject Unit3;
     [SerializeField] GameObject Unit4;
+    [SerializeField] GameObject Currency;
+
+    [SerializeField] Strategy strategy;
+
     private List<GameObject> Units;
 
     [SerializeField] List<Sprite> Numbers;
@@ -23,7 +27,7 @@ public class ShopUnitUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        UpdateCurrency(strategy.GetCurrency());
     }
 
     public void UpdateStats(int unit, int value, int attack, int health, int speed)
@@ -43,5 +47,10 @@ public class ShopUnitUI : MonoBehaviour
     public void RevealStats(int unit)
     {
         Units[unit - 1].SetActive(true);
+    }
+
+    public void UpdateCurrency(int amount)
+    {
+        Currency.GetComponent<Image>().sprite = Numbers[amount];
     }
 }
