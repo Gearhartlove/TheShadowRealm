@@ -32,12 +32,15 @@ public class ShopUnitUI : MonoBehaviour
 
     public void UpdateStats(int unit, int value, int attack, int health, int speed)
     {
-        GameObject currentUnit = Units[unit - 1];
-        GameObject currentNumbers = currentUnit.transform.GetChild(1).gameObject;
-        currentNumbers.transform.Find("Value Number").GetComponent<Image>().sprite = Numbers[value];
-        currentNumbers.transform.Find("Attack Number").GetComponent<Image>().sprite = Numbers[attack];
-        currentNumbers.transform.Find("Health Number").GetComponent<Image>().sprite = Numbers[health];
-        currentNumbers.transform.Find("Speed Number").GetComponent<Image>().sprite = Numbers[speed];
+        // Added if statement to avoid referencing Unit's which don't exist (Out of Bounds error)
+        if (Units != null) {
+            GameObject currentUnit = Units[unit - 1];
+            GameObject currentNumbers = currentUnit.transform.GetChild(1).gameObject;
+            currentNumbers.transform.Find("Value Number").GetComponent<Image>().sprite = Numbers[value];
+            currentNumbers.transform.Find("Attack Number").GetComponent<Image>().sprite = Numbers[attack];
+            currentNumbers.transform.Find("Health Number").GetComponent<Image>().sprite = Numbers[health];
+            currentNumbers.transform.Find("Speed Number").GetComponent<Image>().sprite = Numbers[speed];
+        }
     }
 
     public void HideStats(int unit)

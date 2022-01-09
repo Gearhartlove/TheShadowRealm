@@ -53,12 +53,27 @@ public class Strategy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach (GameObject monster in ShopMonsters)
-        {
-            if (!monster)
-            {
-                SpawnMonster(ShopMonsters.IndexOf(monster) + 1);
+        // Adding code so monsters do not spawn unless it is currently the strategy phase 
+        if (_gameFlowManager.GetCurrentPhase == "Strategy") {
+            // TODO: CADE PLEASE READ
+            // Kristoff: I changed this code because the code below was giving me an "InvalidOperationException" for
+            // trying to iterate over the ShopMonsters List. You can change this back Cade if it is causing you problems.
+            // Please tell me if you do so
+            for (int i = 0; i < ShopMonsters.Count; i++) {
+                if (!ShopMonsters[i]) {
+                    // SpawnMonster(ShopMonsters[i]);
+                    SpawnMonster(i);
+                }
             }
+            
+            // OLD CODE 
+            // foreach (GameObject monster in ShopMonsters)   
+            // {
+            //     if (!monster)
+            //     {
+            //         SpawnMonster(ShopMonsters.IndexOf(monster) + 1);
+            //     }
+            // }
         }
     }
 
